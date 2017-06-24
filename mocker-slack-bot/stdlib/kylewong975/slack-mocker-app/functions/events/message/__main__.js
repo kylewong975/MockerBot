@@ -33,7 +33,7 @@ module.exports = (user, channel, text = '', event = {}, botToken = null, callbac
 //Randomly capitalizes some letters (50% chance to capitalize a letter)
 function randomCapitalize(txt){
 	var tmp = '';
-	txt.toLowerCase(); //handle the case where user types in all caps.
+	txt = txt.toLowerCase(); //handle the case where user types in all caps.
 	for(var x = 0; x < txt.length; x++)
 	{
 		var num = 1 + (Math.random() * 100); //1 to 100
