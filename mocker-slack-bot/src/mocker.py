@@ -5,12 +5,9 @@ import random
 SOCKET_DELAY = 1
 
 # slackbot environment variables (secret!) 
-# MOCK_SLACK_NAME = os.environ.get('MOCK_SLACK_NAME')
-# MOCK_SLACK_TOKEN = os.environ.get('MOCK_SLACK_TOKEN')
-# MOCK_SLACK_ID = os.environ.get('MOCK_SLACK_ID')
-MOCK_SLACK_NAME = 'mocker'
-MOCK_SLACK_TOKEN = 'xoxb-202307400466-cFIbiaJuzJwuTDeujGOY9KOO'
-MOCK_SLACK_ID = 'U5Y91BSDQ'
+MOCK_SLACK_NAME = os.environ.get('MOCK_SLACK_NAME')
+MOCK_SLACK_TOKEN = os.environ.get('MOCK_SLACK_TOKEN')
+MOCK_SLACK_ID = os.environ.get('MOCK_SLACK_ID')
 
 # initialize the stack client
 mocker_slack_client = slackclient.SlackClient(MOCK_SLACK_TOKEN)
