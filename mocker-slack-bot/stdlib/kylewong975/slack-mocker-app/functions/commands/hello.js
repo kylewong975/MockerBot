@@ -34,7 +34,7 @@ function randomCapitalize(txt){
 		var num = 1 + (Math.random() * 100); //1 to 100
 		if(num <= 50)
 		{
-			tmp += txt.charAt(x);
+			tmp += txt.charAt(x).toLowerCase();
 		}
 		else
 			tmp += txt.charAt(x).toUpperCase();
