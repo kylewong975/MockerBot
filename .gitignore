@@ -1,3 +1,4 @@
 # Files intentionally not tracked by Git.
 
 */env.sh
+*/env.json
