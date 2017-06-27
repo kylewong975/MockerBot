@@ -20,7 +20,7 @@ module.exports = (user, channel, text = '', event = {}, botToken = null, callbac
 
   // Mock every message
 	if (text.match(/.*/)) {
-		text = randomCapitalize(text);
+		text = alternateCapitalize(text);
     callback(null, {
 		text: `${text}`
     });
@@ -30,7 +30,22 @@ module.exports = (user, channel, text = '', event = {}, botToken = null, callbac
 
 };
 
+//Alternately capitalizes letters. In this implementation, even index is 
+//lowercase, odd index is uppercase
+function alternateCapitalize(txt){
+	var tmp = '';
+	for(var x = 0; x < txt.length; x++)
+	{
+		if(x % 2 == 1)
+			tmp += txt.charAt(x).toUpperCase();
+		else
+			tmp += txt.charAt(x).toLowerCase();
+	}
+	return tmp;
+}
+
 //Randomly capitalizes some letters (50% chance to capitalize a letter)
+/*
 function randomCapitalize(txt){
 	var tmp = '';
 	for(var x = 0; x < txt.length; x++)
@@ -45,3 +60,4 @@ function randomCapitalize(txt){
 	}
 	return tmp;
 }
+*/
